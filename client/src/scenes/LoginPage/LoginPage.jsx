@@ -27,6 +27,7 @@ const Login = () => {
           if (response.ok) {
             // Maneja el éxito (por ejemplo, guarda el token, redirige, etc.)
             console.log('Login successful:', data);
+            localStorage.setItem('token', data.token);
             navigate('/home')
           } else {
             // Maneja el error (por ejemplo, credenciales incorrectas)
