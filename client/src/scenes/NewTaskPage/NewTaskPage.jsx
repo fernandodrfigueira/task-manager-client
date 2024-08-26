@@ -3,7 +3,6 @@ import { useState } from "react"
 
 export default function NewTaskPage() {
     const [title, setTitle] = useState('')
-    const [description, setDescription] = useState('')
     const [project, setProject] = useState('')
     const [category, setCategory] = useState('')
     
