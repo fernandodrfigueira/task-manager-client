@@ -25,7 +25,7 @@ IMPORTANTE:
 
    El back (task-manager) debe iniciarse primero en el puerto 3000. Una vez iniciado el back, se puede iniciar el client (puerto 3001).
 
-   Si se quieres probar las peticiones al server en vez de al localhost - sustituir http://localhost:3000 por https://taskmanager-0ktf.onrender.com
+   Si se quiere probar las peticiones al server en vez de al localhost - sustituir http://localhost:3000 por https://taskmanager-0ktf.onrender.com
 
 2. Login ->
 
