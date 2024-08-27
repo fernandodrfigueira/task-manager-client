@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 export default function Task({title, project, category, status, _id}) {
     const [ isEdit, setIsEdit ] = useState(false)
@@ -6,14 +7,16 @@ export default function Task({title, project, category, status, _id}) {
     const [updatedProject, setProject] = useState(project)
     const [updatedCategory, setCategory] = useState(category)
     const [updatedStatus, setStatus] = useState(status)
+    const navigate = useNavigate();
+
     
     return (<div className="basicCard">
         {!isEdit&&(
             <div>
-                <p className="taskTitle">{updatedTitle}</p>
-                <p className="taskProject">{updatedProject}</p>
-                <p className="taskCategory">{updatedCategory}</p>
-                <p className="taskStatus">{updatedStatus}</p>
+                <p className="taskTitle">{title}</p>
+                <p className="taskProject">{project}</p>
+                <p className="taskCategory">{category}</p>
+                <p className="taskStatus">{status}</p>
             </div>
 )}
         {isEdit&&(
@@ -71,9 +74,10 @@ export default function Task({title, project, category, status, _id}) {
                                 "status": updatedStatus,
                             }
                             )
-                            
+                           
                         })
-                    console.log(title, project, category)
+                        window.location.reload(); 
+                        console.log(title, project, category)
                     }
                     }>Guardar</button>)}
                     </div>

@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link  } from "react-router-dom";
 import LoginPage from './scenes/LoginPage/LoginPage';
 import TaskPage from './scenes/TaskPage/TaskPage';
 import AllTasks from './scenes/AllTasks/AllTasks';
@@ -13,12 +13,12 @@ import logo from './TaskManagerLogo.png'
 function App() {
   return (
     <div className="app">
-
+      <BrowserRouter>
       <header className='App-header'>
-          <img className="logo" src={logo} alt="Logo" />
+          <Link to='/home' ><img className="logo" src={logo} alt="Logo" /></Link>
       </header>,
 
-      <BrowserRouter>
+      
         <Routes>
           <Route
               path="/"
