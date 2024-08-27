@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import Task from "../../components/Task";
 import { useState, useEffect } from "react";
 
+
 export default function TaskPage(){
     const {taskId } = useParams()
     const [ data, setData ] = useState ([]);
@@ -17,7 +18,8 @@ export default function TaskPage(){
           })
         .then(res => res.json())
         .then(json => setData(json))
-    },[])
+
+},[])
     return(
         <div className="mainContainer">
            <Task
