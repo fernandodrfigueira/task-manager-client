@@ -12,12 +12,15 @@ export default function HomePage(){
         navigate(`/tasks/${id}`);
     }
     return(
-        <div>
-           <button onClick={goSeeAll}>Ver todas</button>
-           <input name="id" required onChange={(inputId) => {
-                    setId(inputId.target.value)
-                }}></input>
-            <button onClick={getById}>Buscar tareas</button>
+        <div className="mainContainer">
+            
+            <div className="homeSearch">
+                <input className="basicInput" name="id" required onChange={(inputId) => {
+                        setId(inputId.target.value)
+                    }}></input>
+                <button className="basicButton" onClick={getById}>Buscar tareas</button>
+            </div>
+            <button className="basicButton" onClick={goSeeAll}>Ver todas</button>
         </div>
         
 

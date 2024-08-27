@@ -19,7 +19,8 @@ export default function TaskPage(){
         .then(json => setData(json))
     },[])
     return(
-        <Task
+        <div className="mainContainer">
+           <Task
                 title={data.title}
                 project={data.project}
                 category={data.category}
@@ -27,6 +28,8 @@ export default function TaskPage(){
                 _id={data._id}
              >
 
-       </Task>
+       </Task> 
+        </div>
+        
     )
 }

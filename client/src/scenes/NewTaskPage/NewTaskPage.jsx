@@ -1,4 +1,4 @@
-import { toBeRequired } from "@testing-library/jest-dom/matchers"
+
 import { useState } from "react"
 
 export default function NewTaskPage() {
@@ -8,24 +8,30 @@ export default function NewTaskPage() {
     
 
     return (
-        <div>
+        <div className="mainContainer">
             <form onSubmit={e => {
             e.preventDefault();
 
             }}>
-                <label>Título</label>
-                <input name="title" required onChange={(inputTitle) => {
-                    setTitle(inputTitle.target.value)
-                }}/>
-                <label>Proyecto</label>
-                <input name="project" required onChange={(inputProject) => {
+                <div className="formElement">
+                    <label className="basicLabel">Título</label>
+                    <input className="basicInput" name="title" required onChange={(inputTitle) => {
+                        setTitle(inputTitle.target.value)
+                     }}/>
+                </div>
+                <div className="formElement">
+                    <label className="basicLabel">Proyecto</label>
+                    <input className="basicInput" name="project" required onChange={(inputProject) => {
                     setProject(inputProject.target.value)
+                    }}></input>
+                </div>
+                <div className="formElement">
+                    <label className="basicLabel">Categoría</label>
+                    <input className="basicInput" name="category" required onChange={(inputCategory) => {
+                        setCategory(inputCategory.target.value)
                 }}></input>
-                <label>Categoría</label>
-                <input name="category" required onChange={(inputCategory) => {
-                    setCategory(inputCategory.target.value)
-                }}></input>
-                <button type="submit" onClick={() => {
+                </div>
+                <button className="basicButton" type="submit" onClick={() => {
                     fetch('http://localhost:3000/addTask', {
                         method: 'POST',
                         headers: { 

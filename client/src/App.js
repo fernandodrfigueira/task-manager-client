@@ -5,6 +5,7 @@ import TaskPage from './scenes/TaskPage/TaskPage';
 import AllTasks from './scenes/AllTasks/AllTasks';
 import HomePage from './scenes/HomePage/HomePage';
 import NewTaskPage from './scenes/NewTaskPage/NewTaskPage';
+import logo from './TaskManagerLogo.png'
 
 
 
@@ -12,6 +13,11 @@ import NewTaskPage from './scenes/NewTaskPage/NewTaskPage';
 function App() {
   return (
     <div className="app">
+
+      <header className='App-header'>
+          <img className="logo" src={logo} alt="Logo" />
+      </header>,
+
       <BrowserRouter>
         <Routes>
           <Route

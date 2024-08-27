@@ -1,38 +1,157 @@
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 10vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  justify-content: center;
+  padding: 0.2rem;
+}
+.basicButton {
+  background-color: rgb(170, 36, 216);
+  color: rgb(255, 255, 255);
+  font-weight: 550;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.4rem 1.1rem;
+}
+.basicIconButton {
+  background-color: rgb(170, 36, 216);
+  color: rgb(255, 255, 255);
+  font-weight: 550;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.6rem 0.8rem;
 }
 
-.App-link {
-  color: #61dafb;
+.mainContainer {
+  
+  margin-left: 20vw;
+  max-width: 60vw;
+  display: grid;
+  place-items: center;
+  padding-top: 2rem;
+  text-decoration: none;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.basicButtonRed {
+  background-color: rgb(235, 44, 127);
+  color: rgb(255, 255, 255);
+  font-weight: 550;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.4rem 1.1rem;
+  margin-right: 0.6rem;
+}
+
+.logo {
+  height: 7vh;
+  margin: 10px;
+
+}
+
+.basicCard {
+  background-color: rgb(238, 221, 244);
+  padding: 1.5rem;
+  padding-top: 0.4rem;
+  margin-bottom: 1.8rem;
+  width: 35vw;
+  border-radius: 1rem;
+}
+.taskTitle {
+  color: rgb(170, 36, 216);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.taskProject {
+  color: rgb(77, 16, 98);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.taskCategory {
+  color: rgb(77, 16, 98);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.taskStatus {
+  color: rgb(77, 16, 98);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.taskId {
+  color: rgb(170, 36, 216);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.getAllUl {
+  list-style: none;
+}
+
+.cardButtons {
+  margin-top: 1.4rem;
+}
+
+.formElement {
+  display: flex;
+  justify-content: space-between;
+  width: 25vw;
+  margin-bottom: 1rem;
+}
+
+.basicInput {
+  background-color: rgb(229, 198, 239);
+  border: none;
+  color: white;
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+  width: 15vw;
+}
+
+.basicSelect {
+  background-color: rgb(229, 198, 239);
+  border: none;
+  color: rgb(170, 36, 216);
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+  width: 10vw;
+
+}
+
+.basicLabel {
+  color: rgb(170, 36, 216);
+  font-size: 1.2rem;
+  margin-right: 0.4rem;
+}
+
+.homeSearch {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 25vw;
+
+}
+
+.cardForm {
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.login {
+  width: 30vw;
+  margin-left: 35vw;
+  justify-content: space-between;
+}
+.loginTitle {
+  color: rgb(170, 36, 216)
 }

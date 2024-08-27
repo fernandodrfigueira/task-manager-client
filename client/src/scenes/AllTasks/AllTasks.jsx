@@ -24,9 +24,9 @@ export default function AllTasks(){
    [])
    console.log(data);
     return (
-        <div>
-        <button onClick={() => navigate('/new')}>+</button>
-        <ul> {data.map((dataEntry) => {
+        <div className="mainContainer">
+        <button className="basicIconButton" onClick={() => navigate('/new')}>+</button>
+        <ul className="getAllUl"> {data.map((dataEntry) => {
        return <li><Task
                 title={dataEntry.title}
                 project={dataEntry.project}

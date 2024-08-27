@@ -42,21 +42,21 @@ const Login = () => {
       };
     
       return (
-        <div>
-          <h2>Login</h2>
+        <div className='login'>
+          <h2 className='loginTitle'>Login</h2>
           <form onSubmit={handleSubmit}>
-            <div>
-              <label>Email:</label>
-              <input
+            <div  className="formElement">
+              <label className="basicLabel">Email:</label>
+              <input className="basicInput"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
-            <div>
-              <label>Password:</label>
-              <input
+            <div  className="formElement">
+              <label className="basicLabel">Password:</label>
+              <input className="basicInput"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -64,7 +64,7 @@ const Login = () => {
               />
             </div>
             {error && <p style={{ color: 'red' }}>{error}</p>}
-            <button type="submit" disabled={loading}>
+            <button className="basicButton"type="submit" disabled={loading}>
               {loading ? 'Loading...' : 'Login'}
             </button>
           </form>
