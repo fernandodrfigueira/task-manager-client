@@ -20,13 +20,20 @@
   border-radius: 1rem;
   padding: 0.4rem 1.1rem;
 }
-.basicIconButton {
+
+.getTasks {
+  display: flex;
+  justify-content: left;
+}
+
+.mainButton {
   background-color: rgb(170, 36, 216);
   color: rgb(255, 255, 255);
   font-weight: 550;
+  font-size: 0.9rem;
   border: none;
-  border-radius: 1rem;
-  padding: 0.6rem 0.8rem;
+  border-radius: 1.5rem;
+  padding: 0.8rem 1rem;
 }
 
 .mainContainer {
