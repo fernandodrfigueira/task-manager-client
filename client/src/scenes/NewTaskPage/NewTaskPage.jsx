@@ -1,10 +1,11 @@
-
+import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 
 export default function NewTaskPage() {
     const [title, setTitle] = useState('')
     const [project, setProject] = useState('')
     const [category, setCategory] = useState('')
+    const navigate = useNavigate()
     
 
     return (
@@ -49,6 +50,8 @@ export default function NewTaskPage() {
                         
                     })
                 console.log(title, project, category)
+                navigate('/all')
+                window.location.reload(); 
                 }
                 }>Enviar</button>
             </form>

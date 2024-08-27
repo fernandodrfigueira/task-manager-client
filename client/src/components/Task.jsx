@@ -7,7 +7,7 @@ export default function Task({title, project, category, status, _id}) {
     const [updatedProject, setProject] = useState(project)
     const [updatedCategory, setCategory] = useState(category)
     const [updatedStatus, setStatus] = useState(status)
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
     
     return (<div className="basicCard">
@@ -50,6 +50,9 @@ export default function Task({title, project, category, status, _id}) {
                             'Content-Type': 'application/json',
                            },
                         })
+                        console.log(title, project, category)
+                        navigate('/all')
+                        window.location.reload(); 
                 }
                 
                 }>Borrar</button>
